@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 html,
 body {
   font-family: "Montserrat", sans-serif;
@@ -27,8 +31,8 @@ svg {
   /* Light Theme Variables */
   --color-text-light: #333332;
   --color-background-light: #ffffff;
-  --color-pink-light: #030303;
-  --color-green-light: #7AD0AC;
+  --color-pink-light: #000000;
+  --color-green-light: #7ad0ac;
   --color-blue-light: #8395CD;
 
   /* Dark Theme Variables */
@@ -39,9 +43,9 @@ svg {
 .light-theme {
   --color-text: var(--color-text-light);
   --color-background: var(--color-background-light);
-  --color-pink: var(--color-pink-light);
-  --color-green: var(--color-green-light);
-  --color-blue: var(--color-blue-light);
+  --color-pink: #000000;
+  --color-green: #000000;
+  --color-blue: #000000;
 }
 
 .dark-theme {
@@ -98,7 +102,7 @@ svg {
   height: 10px;
   border-radius: 50%;
   margin: 6px;
-  background-color: var(--color-pink-light);
+  background-color: var(--color-background-light);
   animation: load 1s ease-in-out infinite;
 }
 
