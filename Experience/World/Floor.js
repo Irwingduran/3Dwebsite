@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import Experience from "../Experience.js";
+import Experience from "../Experience";
 
 export default class Floor {
     constructor() {
@@ -13,7 +13,7 @@ export default class Floor {
     setFloor() {
         this.geometry = new THREE.PlaneGeometry(100, 100);
         this.material = new THREE.MeshStandardMaterial({
-            color: 0xffe6a2,
+            color: 0xf3f3f3,
             side: THREE.BackSide,
         });
         this.plane = new THREE.Mesh(this.geometry, this.material);
@@ -25,9 +25,9 @@ export default class Floor {
 
     setCircles() {
         const geometry = new THREE.CircleGeometry(5, 64);
-        const material = new THREE.MeshStandardMaterial({ color: 0xe5a1aa });
-        const material2 = new THREE.MeshStandardMaterial({ color: 0x8395cd });
-        const material3 = new THREE.MeshStandardMaterial({ color: 0x7ad0ac });
+        const material = new THREE.MeshStandardMaterial({ color: 0x315C4A });
+        const material2 = new THREE.MeshStandardMaterial({ color: 0x6D6F3A });
+        const material3 = new THREE.MeshStandardMaterial({ color: 0x3D3D3D });
 
         this.circleFirst = new THREE.Mesh(geometry, material);
         this.circleSecond = new THREE.Mesh(geometry, material2);
@@ -47,19 +47,19 @@ export default class Floor {
         this.circleFirst.rotation.x =
             this.circleSecond.rotation.x =
             this.circleThird.rotation.x =
-                -Math.PI / 2;
+            -Math.PI / 2;
 
         this.circleFirst.receiveShadow =
             this.circleSecond.receiveShadow =
             this.circleThird.receiveShadow =
-                true;
+            true;
 
         this.scene.add(this.circleFirst);
         this.scene.add(this.circleSecond);
         this.scene.add(this.circleThird);
     }
 
-    resize() {}
+    resize() { }
 
-    update() {}
+    update() { }
 }
